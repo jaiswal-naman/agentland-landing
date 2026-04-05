@@ -86,7 +86,7 @@ export function Founder() {
             />
 
             {/* Name */}
-            <p className="text-[var(--navy)] font-bold text-base">Naman</p>
+            <p className="text-[var(--navy)] font-bold text-base">Naman Jaiswal</p>
 
             {/* Credentials */}
             <p className="text-[var(--text-tertiary)] text-sm mt-1">
