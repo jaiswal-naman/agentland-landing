@@ -1,180 +1,149 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "motion/react";
 import { PhaseConnect } from "./phase-connect";
 import { PhaseDiscover } from "./phase-discover";
 import { PhaseAutomate } from "./phase-automate";
 import { PhaseMonitor } from "./phase-monitor";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const phases = [
   {
     key: "connect",
+    number: "01",
     label: "Connect",
-    color: "var(--connect-color)",
-    headline: "Connect your systems.",
-    copy: "Plug in your CRM, ERP, support desk, databases. 10 minutes, not months.",
+    color: "#0EA5E9",
+    bgGradient: "linear-gradient(135deg, #F0F9FF, #E0F2FE)",
+    title: "Link your tools in minutes",
+    description:
+      "CRMs, databases, communication platforms — via OAuth or API key.",
     Visual: PhaseConnect,
   },
   {
     key: "discover",
+    number: "02",
     label: "Discover",
-    color: "var(--discover-color)",
-    headline: "AI finds what to automate.",
-    copy: "LLMs scan your data flows, map every process, and rank them by ROI — so you automate the right things first.",
+    color: "#7C3AED",
+    bgGradient: "linear-gradient(135deg, #F5F3FF, #EDE9FE)",
+    title: "AI finds what to automate",
+    description:
+      "AI scans your workflows, communication patterns, and data — surfaces every opportunity, ranked by ROI.",
     Visual: PhaseDiscover,
   },
   {
-    key: "automate",
-    label: "Automate",
-    color: "var(--automate-color)",
-    headline: "Agents built and deployed for you.",
-    copy: "Template-based agents configured, validated, sandboxed, and deployed. Days, not quarters.",
+    key: "deploy",
+    number: "03",
+    label: "Build & Deploy",
+    color: "#059669",
+    bgGradient: "linear-gradient(135deg, #ECFDF5, #D1FAE5)",
+    title: "Review, approve, it's live",
+    description:
+      "Review the plan. Approve it. It's live. No code, no infrastructure, no guesswork.",
     Visual: PhaseAutomate,
   },
   {
     key: "monitor",
+    number: "04",
     label: "Monitor",
-    color: "var(--monitor-color)",
-    headline: "Everything monitored. Continuously.",
-    copy: "Real-time dashboards, cost tracking, error alerts, ROI proof. Set it and trust it.",
+    color: "#D97706",
+    bgGradient: "linear-gradient(135deg, #FFFBEB, #FEF3C7)",
+    title: "Full visibility, always",
+    description:
+      "Every agent, every execution. Success rates, time saved, costs tracked. Alerts on drift.",
     Visual: PhaseMonitor,
   },
 ];
 
 export function HowItWorks() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [activePhase, setActivePhase] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  useEffect(() => {
-    if (isMobile || !sectionRef.current) return;
-
-    const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      pin: true,
-      start: "top top",
-      end: "+=400%",
-      scrub: 1,
-      onUpdate: (self) => {
-        const phase = Math.min(
-          Math.floor(self.progress * phases.length),
-          phases.length - 1
-        );
-        setActivePhase(phase);
-      },
-    });
-
-    return () => {
-      trigger.kill();
-    };
-  }, [isMobile]);
-
-  const current = phases[activePhase];
-
   return (
-    <section
-      ref={sectionRef}
-      id="how-it-works"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-[var(--bg-primary)] py-20 md:py-0"
-    >
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-16"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Four steps. One platform.
-          <br />
-          <span className="text-[var(--text-secondary)]">
-            Zero AI expertise needed.
-          </span>
-        </h2>
+    <section id="how-it-works" className="py-24 sm:py-32 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-16 sm:mb-20">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--indigo)] mb-4"
+          >
+            How It Works
+          </motion.p>
 
-        {/* Progress indicator */}
-        <div className="flex items-center justify-center gap-1 sm:gap-2 mb-16 flex-wrap">
-          {phases.map((phase, i) => (
-            <div key={phase.key} className="flex items-center">
-              <div
-                className="w-3 h-3 rounded-full transition-all duration-500"
-                style={{
-                  backgroundColor:
-                    i <= activePhase ? phase.color : "var(--border-subtle)",
-                  boxShadow:
-                    i === activePhase ? `0 0 12px ${phase.color}` : "none",
-                }}
-              />
-              <span
-                className="ml-2 text-xs sm:text-sm font-medium transition-colors duration-500"
-                style={{
-                  color:
-                    i === activePhase ? phase.color : "var(--text-tertiary)",
-                }}
-              >
-                {phase.label}
-              </span>
-              {i < phases.length - 1 && (
-                <div
-                  className="w-8 sm:w-20 h-px mx-2 sm:mx-3 transition-colors duration-500"
-                  style={{
-                    backgroundColor:
-                      i < activePhase ? phase.color : "var(--border-subtle)",
-                  }}
-                />
-              )}
-            </div>
-          ))}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Four phases.{" "}
+            <span className="gradient-heading">One platform.</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-5 text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed"
+          >
+            From your first connected system to a running fleet of agents. End
+            to end.
+          </motion.p>
         </div>
 
-        {/* Desktop: pinned content */}
-        {!isMobile && (
-          <div className="relative min-h-[500px] flex flex-col items-center justify-center">
-            <h3
-              className="text-3xl sm:text-4xl font-bold mb-4 transition-colors duration-500"
-              style={{ color: current.color, fontFamily: "var(--font-display)" }}
+        {/* Phase cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {phases.map((phase, i) => (
+            <motion.div
+              key={phase.key}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.5,
+                delay: 0.15 * i,
+                ease: "easeOut",
+              }}
+              className="group rounded-2xl border border-[var(--border-subtle)] bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5"
             >
-              {current.headline}
-            </h3>
-            <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-12">
-              {current.copy}
-            </p>
-            <div className="w-full">
-              <current.Visual />
-            </div>
-          </div>
-        )}
-
-        {/* Mobile: stacked */}
-        {isMobile && (
-          <div className="space-y-24">
-            {phases.map((phase) => (
-              <div key={phase.key} className="text-center">
-                <h3
-                  className="text-3xl font-bold mb-4"
-                  style={{
-                    color: phase.color,
-                    fontFamily: "var(--font-display)",
-                  }}
-                >
-                  {phase.headline}
-                </h3>
-                <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8">
-                  {phase.copy}
-                </p>
-                <phase.Visual />
+              {/* Visual area */}
+              <div
+                className="h-[160px] relative flex items-center justify-center overflow-hidden"
+                style={{ background: phase.bgGradient }}
+              >
+                <div className="scale-[0.55] pointer-events-none">
+                  <phase.Visual />
+                </div>
               </div>
-            ))}
-          </div>
-        )}
+
+              {/* Card content */}
+              <div className="p-5 sm:p-6">
+                {/* Phase number + label */}
+                <p className="text-xs font-semibold tracking-wide mb-2">
+                  <span className="text-[var(--text-tertiary)]">
+                    {phase.number}
+                  </span>
+                  <span className="text-[var(--text-tertiary)]"> · </span>
+                  <span style={{ color: phase.color }}>{phase.label}</span>
+                </p>
+
+                {/* Title */}
+                <h3
+                  className="text-base font-bold text-[var(--navy)] mb-2 leading-snug"
+                >
+                  {phase.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {phase.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

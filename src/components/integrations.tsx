@@ -25,8 +25,15 @@ const row2 = [
 
 function LogoCard({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="mx-8 flex items-center gap-2 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-      <Image src={logo} alt={name} width={120} height={40} className="h-8 w-auto" />
+    <div className="mx-8 flex items-center gap-2 opacity-30 hover:opacity-80 transition-all duration-300">
+      <Image
+        src={logo}
+        alt={name}
+        width={120}
+        height={40}
+        className="h-8 w-auto"
+        style={{ filter: "brightness(0) saturate(100%)" }}
+      />
     </div>
   );
 }
@@ -38,14 +45,14 @@ export function Integrations() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center text-[var(--text-secondary)] mb-8"
+        className="text-center text-[var(--text-secondary)] mb-8 text-sm"
       >
-        Connects to the tools you already use.
+        Connects to the tools you already run
       </motion.p>
 
       <div className="relative">
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[var(--bg-primary)] to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[var(--bg-primary)] to-transparent z-10" />
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
         <Marquee pauseOnHover className="[--duration:40s] mb-4">
           {row1.map((item) => (

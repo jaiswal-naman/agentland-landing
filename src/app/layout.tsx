@@ -1,25 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "AgentLand — AI Automation That Actually Ships",
+  title: "AgentLand — The AI Adoption Platform",
   description:
-    "AgentLand connects your systems, discovers what to automate, builds the agents, and deploys them. No AI team required.",
+    "Your company is full of automation you can't see yet. AgentLand connects your systems, discovers every workflow worth automating, builds the agents, and deploys them — without an AI team.",
   openGraph: {
-    title: "AgentLand — AI Automation That Actually Ships",
+    title: "AgentLand — The AI Adoption Platform",
     description:
-      "80% of AI projects fail. AgentLand solves discovery, building, deployment, and monitoring — end to end.",
+      "AgentLand discovers what to automate, builds the agents, and runs them — end to end, automatically.",
     type: "website",
   },
 };
@@ -32,18 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/Satoshi-Variable.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
+      <body className="noise-overlay min-h-full flex flex-col bg-white text-[var(--navy)]">
         {children}
       </body>
     </html>

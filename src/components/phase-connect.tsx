@@ -1,36 +1,75 @@
-"use client";
-
-import { OrbitingCircles } from "@/components/ui/orbiting-circles";
-
 export function PhaseConnect() {
   return (
-    <div className="relative h-[300px] w-[300px] mx-auto">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span
-          className="text-2xl font-bold text-[var(--connect-color)]"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          &#9670;
-        </span>
+    <div className="relative h-[160px] w-full flex items-center justify-center">
+      {/* Outer dashed ring */}
+      <div
+        className="absolute rounded-full border border-dashed"
+        style={{
+          width: 220,
+          height: 220,
+          borderColor: "var(--border-subtle)",
+          animation: "spin 30s linear infinite reverse",
+        }}
+      />
+      {/* Inner dashed ring */}
+      <div
+        className="absolute rounded-full border border-dashed"
+        style={{
+          width: 140,
+          height: 140,
+          borderColor: "var(--border-hover)",
+          animation: "spin 20s linear infinite",
+        }}
+      />
+
+      {/* Central hub */}
+      <div
+        className="relative z-10 flex items-center justify-center rounded-full"
+        style={{
+          width: 40,
+          height: 40,
+          background: "linear-gradient(135deg, #0EA5E9, #06B6D4)",
+          boxShadow: "0 4px 20px rgba(14, 165, 233, 0.35)",
+        }}
+      >
+        <span className="text-white text-lg leading-none">&#10033;</span>
       </div>
-      <OrbitingCircles radius={80} duration={20} delay={0}>
-        <span className="text-xl" title="Salesforce">&#9729;&#65039;</span>
-      </OrbitingCircles>
-      <OrbitingCircles radius={80} duration={20} delay={3.3}>
-        <span className="text-xl" title="Slack">&#128172;</span>
-      </OrbitingCircles>
-      <OrbitingCircles radius={80} duration={20} delay={6.6}>
-        <span className="text-xl" title="HubSpot">&#128200;</span>
-      </OrbitingCircles>
-      <OrbitingCircles radius={130} duration={30} delay={0} reverse>
-        <span className="text-xl" title="Jira">&#128203;</span>
-      </OrbitingCircles>
-      <OrbitingCircles radius={130} duration={30} delay={5} reverse>
-        <span className="text-xl" title="Gmail">&#9993;&#65039;</span>
-      </OrbitingCircles>
-      <OrbitingCircles radius={130} duration={30} delay={10} reverse>
-        <span className="text-xl" title="Notion">&#128221;</span>
-      </OrbitingCircles>
+
+      {/* App icons on the orbits */}
+      {[
+        { label: "S", bg: "#1A73E8", angle: 0, ring: 70 },
+        { label: "H", bg: "#FF7A59", angle: 60, ring: 70 },
+        { label: "S", bg: "#611F69", angle: 120, ring: 70 },
+        { label: "J", bg: "#2684FF", angle: 180, ring: 110 },
+        { label: "G", bg: "#EA4335", angle: 270, ring: 110 },
+        { label: "N", bg: "#191919", angle: 30, ring: 110 },
+      ].map((app, i) => {
+        const rad = (app.angle * Math.PI) / 180;
+        const x = Math.cos(rad) * app.ring;
+        const y = Math.sin(rad) * app.ring;
+        return (
+          <div
+            key={i}
+            className="absolute z-10 flex items-center justify-center rounded-lg text-white text-[11px] font-bold"
+            style={{
+              width: 28,
+              height: 28,
+              backgroundColor: app.bg,
+              transform: `translate(${x}px, ${y}px)`,
+              boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+            }}
+          >
+            {app.label}
+          </div>
+        );
+      })}
+
+      <style>{`
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </div>
   );
 }
