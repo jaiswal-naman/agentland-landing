@@ -37,7 +37,7 @@ export function EarlyAccessCTA() {
           className="text-4xl sm:text-5xl lg:text-[56px] leading-[1.12] font-normal text-white mb-6"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Your business.
+          Your agents.
           <br />
           <span
             style={{
@@ -47,7 +47,7 @@ export function EarlyAccessCTA() {
               backgroundClip: "text",
             }}
           >
-            Automated.
+            Under control.
           </span>
         </motion.h2>
 
@@ -60,8 +60,7 @@ export function EarlyAccessCTA() {
           className="text-lg leading-relaxed mb-10 max-w-xl mx-auto"
           style={{ color: "#64748B" }}
         >
-          We&apos;re working with our first design partners this quarter. Spots
-          are limited.
+          We&apos;re onboarding design partners this quarter. Limited spots.
         </motion.p>
 
         {/* CTA Button */}
@@ -80,7 +79,7 @@ export function EarlyAccessCTA() {
                 "0 4px 24px rgba(79, 70, 229, 0.25), 0 0 48px rgba(79, 70, 229, 0.1)",
             }}
           >
-            Get Your Free Audit &rarr;
+            Get Early Access &rarr;
           </a>
         </motion.div>
       </div>

@@ -4,17 +4,17 @@ import { motion } from "motion/react";
 
 /* ─── Discovery result rows ──────────────────────────── */
 const discoveries = [
-  { label: "Email campaign responses", color: "#7C3AED", score: 92 },
-  { label: "Order status updates", color: "#059669", score: 78 },
-  { label: "Meeting note summaries", color: "#0EA5E9", score: 65 },
+  { label: "OpenAI → gpt-4o", color: "#7C3AED", score: 92 },
+  { label: "Anthropic → claude-sonnet", color: "#059669", score: 78 },
+  { label: "Bedrock → llama-3", color: "#0EA5E9", score: 65 },
 ];
 
 /* ─── Dashboard metrics ──────────────────────────────── */
 const metrics = [
-  { value: "6", label: "Agents Live", color: "#4F46E5" },
-  { value: "98%", label: "Success", color: "#059669" },
-  { value: "23h", label: "Saved", color: "#0EA5E9" },
-  { value: "$840", label: "Cost", color: "#D97706" },
+  { value: "47", label: "Agents", color: "#4F46E5" },
+  { value: "99.2%", label: "Uptime", color: "#059669" },
+  { value: "12k", label: "Calls/day", color: "#0EA5E9" },
+  { value: "$840", label: "Cost/wk", color: "#D97706" },
 ];
 
 const barHeights = [65, 80, 45, 90, 55, 75, 35, 85];
@@ -35,7 +35,7 @@ export function FeatureBento() {
           className="text-center text-xs font-semibold uppercase tracking-[0.2em] mb-4"
           style={{ color: "var(--indigo)" }}
         >
-          Platform
+          Capabilities
         </motion.p>
 
         {/* Heading */}
@@ -47,9 +47,9 @@ export function FeatureBento() {
           className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-center mb-14 leading-[1.1]"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Everything needed to
+          Everything to monitor
           <br />
-          <span className="gradient-heading">run AI at scale.</span>
+          <span className="gradient-heading">AI agents at scale.</span>
         </motion.h2>
 
         {/* Bento grid */}
@@ -137,11 +137,11 @@ export function FeatureBento() {
                 className="text-lg font-bold text-[var(--text-primary)] mb-1"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Discovery Engine
+                Multi-Provider Routing
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Reads your business — schemas, logs, communication patterns.
-                Surfaces every automation worth building, ranked by impact.
+                OpenAI, Anthropic, Bedrock, Azure, Vertex, Cohere — one
+                endpoint. Load balance, failover, and route by policy.
               </p>
             </div>
           </motion.div>
@@ -191,11 +191,11 @@ export function FeatureBento() {
                 className="text-lg font-bold text-[var(--text-primary)] mb-1"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                One-Click Deploy
+                Kill Switch
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Review the plan. Approve it. It&apos;s live. No DevOps. No
-                infrastructure.
+                Shut down any agent instantly. If AgentLand goes down, agents
+                keep working. You stay in control.
               </p>
             </div>
           </motion.div>
@@ -277,11 +277,11 @@ export function FeatureBento() {
                 className="text-lg font-bold text-[var(--text-primary)] mb-1"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Enterprise Security
+                PII Detection
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                End-to-end encryption. PII anonymization. Sandboxed execution.
-                Full audit trail.
+                Detects SSN, credit cards, emails, phone numbers, addresses.
+                25+ built-in patterns. Real-time alerts.
               </p>
             </div>
           </motion.div>
@@ -341,11 +341,11 @@ export function FeatureBento() {
                 className="text-lg font-bold text-[var(--text-primary)] mb-1"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Human in the Loop
+                Identity & Access
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Set confidence thresholds. Agents pause on high-stakes
-                decisions.
+                OIDC authentication. Role-based access. Team-scoped
+                permissions. No $500/seat SSO tax.
               </p>
             </div>
           </motion.div>
@@ -407,11 +407,11 @@ export function FeatureBento() {
                 className="text-lg font-bold text-[var(--text-primary)] mb-1"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Live Dashboard
+                Alerts & Integrations
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Every agent. Every execution. Success rates, time saved,
-                inference costs — one view, real time.
+                Datadog, Splunk, PagerDuty, custom webhooks. Real-time
+                alerts when budgets break or PII is detected.
               </p>
             </div>
           </motion.div>
