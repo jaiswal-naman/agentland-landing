@@ -85,7 +85,7 @@ export function Navigation() {
               href="#book-demo"
               className="hidden sm:inline-flex items-center text-sm font-semibold px-5 py-2.5 rounded-lg bg-[var(--navy)] text-white shadow-[0_1px_3px_rgba(10,15,30,0.2),0_4px_12px_rgba(10,15,30,0.1)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(10,15,30,0.25),0_8px_24px_rgba(10,15,30,0.12)]"
             >
-              Book a Demo
+              Get Early Access
               <span className="ml-1.5 transition-transform duration-200 group-hover:translate-x-0.5">
                 &rarr;
               </span>
@@ -168,7 +168,7 @@ export function Navigation() {
                     onClick={closeMobile}
                     className="flex items-center justify-center w-full text-sm font-semibold px-5 py-3 rounded-lg bg-[var(--navy)] text-white shadow-[0_1px_3px_rgba(10,15,30,0.2),0_4px_12px_rgba(10,15,30,0.1)] transition-all duration-200 active:scale-[0.98]"
                   >
-                    Book a Demo &rarr;
+                    Get Early Access &rarr;
                   </a>
                 </div>
               </div>

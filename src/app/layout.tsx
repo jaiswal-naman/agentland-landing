@@ -16,13 +16,13 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "AgentLand — The AI Adoption Platform",
+  title: "AgentLand — Observability for AI Agents",
   description:
-    "Your company is full of automation you can't see yet. AgentLand connects your systems, discovers every workflow worth automating, builds the agents, and deploys them — without an AI team.",
+    "See every AI agent running in your company. Track costs, detect PII, monitor performance, enforce compliance — one dashboard for every agent, every model, every call.",
   openGraph: {
-    title: "AgentLand — The AI Adoption Platform",
+    title: "AgentLand — Observability for AI Agents",
     description:
-      "AgentLand discovers what to automate, builds the agents, and runs them — end to end, automatically.",
+      "See every AI agent. Track costs. Detect PII. Monitor performance. One dashboard.",
     type: "website",
   },
 };

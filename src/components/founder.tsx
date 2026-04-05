@@ -28,7 +28,7 @@ export function Founder() {
         >
           Built for the companies
           <br />
-          <span className="gradient-heading">leaving behind.</span>
+          <span className="gradient-heading">running blind.</span>
         </motion.h2>
 
         {/* Founder card */}
@@ -71,10 +71,9 @@ export function Founder() {
               className="text-[var(--navy)] italic leading-relaxed text-[18px] sm:text-[19px] max-w-md mx-auto"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              The bottleneck was never intelligence. It was the missing layer
-              between &lsquo;we want AI&rsquo; and &lsquo;AI is
-              running.&rsquo; The window opened in 2026 &mdash; and we&apos;re
-              building it now.
+              The bottleneck was never the AI. It was the missing layer
+              between &lsquo;we have agents&rsquo; and &lsquo;we can see
+              what they&apos;re doing.&rsquo; That layer is AgentLand.
             </blockquote>
 
             {/* Gradient divider */}

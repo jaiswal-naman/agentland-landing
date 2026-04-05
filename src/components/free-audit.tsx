@@ -4,33 +4,33 @@ import { motion } from "motion/react";
 
 /* ─── Audit steps ────────────────────────────────────── */
 const steps = [
-  "Connect one system — 10 minutes",
-  "AgentLand maps every automation",
-  "Full report: ROI, time savings, ranked",
-  "No commitment. No surprises.",
+  "Point your agents at AgentLand — 2 minutes",
+  "Every agent appears in your dashboard instantly",
+  "Full report: costs, PII flags, failure rates",
+  "Free and open source. Self-host in minutes.",
 ];
 
 /* ─── Opportunity rows for the floating card ─────────── */
 const opportunities = [
   {
-    label: "Invoice follow-up automation",
-    hours: "+14h/week",
-    score: 88,
-    detail: "ROI: 88/100 \u00B7 Low complexity",
+    label: "Invoice processing agent",
+    hours: "$18.40/wk",
+    score: 98,
+    detail: "1,247 calls \u00B7 0 PII flags",
     gradient: "linear-gradient(90deg, #4F46E5, #7C3AED)",
   },
   {
-    label: "CRM data enrichment",
-    hours: "+8h/week",
-    score: 74,
-    detail: "ROI: 74/100 \u00B7 Medium",
+    label: "Customer onboarding agent",
+    hours: "$12.60/wk",
+    score: 94,
+    detail: "843 calls \u00B7 0 PII flags",
     gradient: "linear-gradient(90deg, #7C3AED, #8B5CF6)",
   },
   {
-    label: "Support ticket routing",
-    hours: "+6h/week",
-    score: 61,
-    detail: "ROI: 61/100 \u00B7 Low",
+    label: "Support routing agent",
+    hours: "$8.20/wk",
+    score: 87,
+    detail: "612 calls \u00B7 2 PII flags",
     gradient: "linear-gradient(90deg, #0EA5E9, #38BDF8)",
   },
 ];
@@ -52,7 +52,7 @@ export function FreeAudit() {
               className="text-xs font-semibold uppercase tracking-[0.2em] mb-4"
               style={{ color: "var(--indigo)" }}
             >
-              The Free Audit
+              Get Started
             </p>
 
             {/* Heading */}
@@ -60,10 +60,10 @@ export function FreeAudit() {
               className="text-4xl sm:text-5xl font-bold leading-[1.1] mb-10"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              See what you&apos;re
+              See what&apos;s running
               <br />
               <span className="gradient-heading">
-                leaving on the table.
+                across your agents.
               </span>
             </h2>
 
@@ -125,7 +125,7 @@ export function FreeAudit() {
                       "0 4px 24px rgba(99,102,241,0.25), 0 1px 3px rgba(0,0,0,0.1)",
                   }}
                 >
-                  Get Your Free Audit &rarr;
+                  Start Free &rarr;
                 </button>
               </a>
             </motion.div>
@@ -167,10 +167,10 @@ export function FreeAudit() {
               {/* Card header */}
               <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
                 <span className="text-sm font-semibold text-slate-800">
-                  Your Audit Report
+                  Agent Overview
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-700">
-                  &#10022; 6 opportunities
+                  &#10022; 6 agents tracked
                 </span>
               </div>
 

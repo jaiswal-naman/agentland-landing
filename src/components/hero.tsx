@@ -13,23 +13,23 @@ const agents = [
   {
     name: "Invoice Processing Agent",
     color: "bg-emerald-500",
-    progress: 87,
+    progress: 98,
     barColor: "bg-emerald-500",
-    metric: "+14h",
+    metric: "98%",
   },
   {
     name: "Customer Onboarding Agent",
     color: "bg-blue-500",
-    progress: 64,
+    progress: 94,
     barColor: "bg-blue-500",
-    metric: "+8h",
+    metric: "94%",
   },
   {
     name: "Report Generation Agent",
     color: "bg-violet-500",
-    progress: 72,
+    progress: 87,
     barColor: "bg-violet-500",
-    metric: "+6h",
+    metric: "87%",
   },
 ];
 
@@ -46,7 +46,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-500 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-indigo-600" />
             </span>
-            The AI Adoption Platform
+            Observability for AI Agents
           </span>
         </motion.div>
 
@@ -56,10 +56,10 @@ export function Hero() {
           className="text-5xl sm:text-6xl lg:text-[68px] font-bold tracking-tight leading-[1.06] text-slate-900"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Your company is full of automation.
+          See every AI agent running
           <br />
           <span className="italic bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">
-            You just can&apos;t see it yet.
+            in your company.
           </span>
         </motion.h1>
 
@@ -68,8 +68,9 @@ export function Hero() {
           {...fadeUp(0.2)}
           className="mt-6 text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed"
         >
-          AgentLand connects to your systems, discovers every workflow worth
-          automating, builds the agents, and deploys them — without an AI team.
+          AgentLand intercepts every agent call — tracks costs, catches
+          failures, flags PII, and enforces compliance. One dashboard for
+          every agent, every model, every provider.
         </motion.p>
 
         {/* CTAs */}
@@ -86,7 +87,7 @@ export function Hero() {
                   "0 4px 24px rgba(99,102,241,0.25), 0 1px 3px rgba(0,0,0,0.1)",
               }}
             >
-              See What You&apos;re Missing &rarr;
+              Start Monitoring &rarr;
             </button>
           </a>
           <a
@@ -125,7 +126,7 @@ export function Hero() {
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              &#10022; 6 agents live
+              &#10022; 6 agents tracked
             </span>
           </div>
 
@@ -136,31 +137,31 @@ export function Hero() {
                 47
               </p>
               <p className="text-xs text-slate-500 mt-1 font-medium">
-                Opportunities
+                Agents Tracked
               </p>
             </div>
             <div className="rounded-xl bg-slate-50/80 p-4 text-center">
               <p className="text-2xl font-bold bg-gradient-to-br from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
-                6
+                0
               </p>
               <p className="text-xs text-slate-500 mt-1 font-medium">
-                Agents Live
+                PII Flags
               </p>
             </div>
             <div className="rounded-xl bg-slate-50/80 p-4 text-center">
               <p className="text-2xl font-bold bg-gradient-to-br from-sky-600 to-sky-400 bg-clip-text text-transparent">
-                23h
+                $1.2k
               </p>
               <p className="text-xs text-slate-500 mt-1 font-medium">
-                Saved / week
+                Cost / week
               </p>
             </div>
             <div className="rounded-xl bg-slate-50/80 p-4 text-center">
               <p className="text-2xl font-bold bg-gradient-to-br from-amber-600 to-amber-400 bg-clip-text text-transparent">
-                98%
+                99.2%
               </p>
               <p className="text-xs text-slate-500 mt-1 font-medium">
-                Success
+                Uptime
               </p>
             </div>
           </div>

@@ -10,28 +10,28 @@ import {
 
 const faqs = [
   {
-    question: "Is this built yet?",
+    question: "What does AgentLand do?",
     answer:
-      "We\u2019re building alongside our early design partners. Book a demo to see where we are.",
+      "AgentLand is an observability platform for AI agents. It intercepts every agent call \u2014 tracks costs, catches failures, flags PII, and enforces compliance. Think Datadog, but for AI agents.",
   },
   {
-    question: "What systems do you connect to?",
+    question: "Which AI providers do you support?",
     answer:
-      "100+ integrations \u2014 CRMs, communication, databases, finance, PM. If it has an API, we can read it.",
+      "OpenAI, Anthropic, AWS Bedrock, Azure OpenAI, Vertex AI, Cohere \u2014 and any OpenAI-compatible endpoint. One proxy for all of them.",
   },
   {
-    question: "Do I need an AI team?",
-    answer: "No. That\u2019s the entire point.",
+    question: "How much latency does it add?",
+    answer: "Less than 5ms p99. Your agents won\u2019t notice.",
   },
   {
-    question: "How long before results?",
+    question: "What happens if AgentLand goes down?",
     answer:
-      "Connect in 10 minutes. First report in 24 hours. First agent live within days.",
+      "Your agents keep working. AgentLand is a passthrough proxy \u2014 if it\u2019s unreachable, traffic routes directly to the provider.",
   },
   {
     question: "Is my data safe?",
     answer:
-      "End-to-end encryption. PII anonymization. Sandboxed execution. Full audit trail.",
+      "End-to-end encryption. PII detection and anonymization. Full audit trail. SOC 2 and GDPR compliant.",
   },
 ];
 
@@ -59,9 +59,9 @@ export function FAQ() {
           className="text-4xl sm:text-5xl font-normal text-center mb-16"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          Answers to what
+          Questions.
           <br />
-          <span className="gradient-heading">you&apos;re wondering.</span>
+          <span className="gradient-heading">Answered.</span>
         </motion.h2>
 
         {/* Accordion */}

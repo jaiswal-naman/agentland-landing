@@ -100,39 +100,36 @@ function GenerateVisual() {
         style={{ background: "rgba(0,0,0,.35)" }}
       >
         <div>
-          <span style={{ color: "#4B5563" }}>{"// Auto-generated agent"}</span>
+          <span style={{ color: "#4B5563" }}>{"// Cost breakdown — last 7d"}</span>
         </div>
         <div>
-          <span style={{ color: "#818CF8" }}>const</span>{" "}
-          <span style={{ color: "#E2E8F0" }}>agent</span>{" "}
-          <span style={{ color: "#818CF8" }}>=</span>{" "}
-          <span style={{ color: "#A5B4FC" }}>AgentLand</span>
-          <span style={{ color: "#E2E8F0" }}>.</span>
-          <span style={{ color: "#A5B4FC" }}>create</span>
-          <span style={{ color: "#E2E8F0" }}>{"({"}</span>
-        </div>
-        <div className="pl-4">
-          <span style={{ color: "#E2E8F0" }}>type:</span>{" "}
+          <span style={{ color: "#818CF8" }}>agent</span>
+          <span style={{ color: "#E2E8F0" }}>:</span>{" "}
           <span style={{ color: "#86EFAC" }}>
-            &apos;invoice-followup&apos;
-          </span>
-          <span style={{ color: "#E2E8F0" }}>,</span>
-        </div>
-        <div className="pl-4">
-          <span style={{ color: "#E2E8F0" }}>trigger:</span>{" "}
-          <span style={{ color: "#86EFAC" }}>
-            &apos;overdue &gt; 7d&apos;
-          </span>
-          <span style={{ color: "#E2E8F0" }}>,</span>
-        </div>
-        <div className="pl-4">
-          <span style={{ color: "#E2E8F0" }}>action:</span>{" "}
-          <span style={{ color: "#86EFAC" }}>
-            &apos;send-reminder&apos;
+            &apos;invoice-processor&apos;
           </span>
         </div>
         <div>
-          <span style={{ color: "#E2E8F0" }}>{"})"}</span>
+          <span style={{ color: "#818CF8" }}>model</span>
+          <span style={{ color: "#E2E8F0" }}>:</span>{" "}
+          <span style={{ color: "#86EFAC" }}>
+            &apos;gpt-4o&apos;
+          </span>
+        </div>
+        <div>
+          <span style={{ color: "#818CF8" }}>calls</span>
+          <span style={{ color: "#E2E8F0" }}>:</span>{" "}
+          <span style={{ color: "#A5B4FC" }}>1,247</span>
+        </div>
+        <div>
+          <span style={{ color: "#818CF8" }}>cost</span>
+          <span style={{ color: "#E2E8F0" }}>:</span>{" "}
+          <span style={{ color: "#86EFAC" }}>$18.40</span>
+        </div>
+        <div>
+          <span style={{ color: "#818CF8" }}>pii_flags</span>
+          <span style={{ color: "#E2E8F0" }}>:</span>{" "}
+          <span style={{ color: "#FCA5A5" }}>0</span>
         </div>
       </div>
     </div>
@@ -273,28 +270,28 @@ function GlassCard({
 const cards = [
   {
     visual: <FindVisual />,
-    title: "Find what to automate",
+    title: "See every agent",
     description:
-      "AI reads your actual business data \u2014 messy, real-world workflows.",
-    pill: "Previously impossible",
+      "Agents appear in your dashboard the moment they route through the proxy. Zero config, zero SDK changes.",
+    pill: "Auto-discovery",
   },
   {
     visual: <GenerateVisual />,
-    title: "Generate the agent",
-    description: "Template-based generation. 95%+ reliability by design.",
-    pill: "No code required",
+    title: "Track every dollar",
+    description: "Per-agent, per-model, per-day cost breakdown. Catch runaway loops before they burn budget.",
+    pill: "Cost intelligence",
   },
   {
     visual: <DeployVisual />,
-    title: "One click to production",
-    description: "Sandboxed. Secure. Rollback-ready.",
-    pill: "Sandboxed execution",
+    title: "Flag sensitive data",
+    description: "Detects SSN, credit cards, emails, phone numbers, addresses. 25+ pattern tests out of the box.",
+    pill: "PII detection",
   },
   {
     visual: <MetricsVisual />,
-    title: "Full visibility, always",
-    description: "ROI tracked. Costs monitored. Alerts on drift.",
-    pill: "Real-time",
+    title: "Govern and comply",
+    description: "Kill switch per agent. RBAC. EU AI Act readiness. SOC 2 evidence packages.",
+    pill: "Compliance-ready",
   },
 ];
 
@@ -365,7 +362,7 @@ export function TheShift() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          The Complete Picture
+          The Control Plane
         </motion.p>
 
         {/* Heading */}
@@ -378,7 +375,7 @@ export function TheShift() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Every company has the tools.
+          Every company runs agents.
           <br />
           <span
             className="bg-clip-text text-transparent"
@@ -386,7 +383,7 @@ export function TheShift() {
               backgroundImage: "linear-gradient(135deg, #A5B4FC, #C4B5FD)",
             }}
           >
-            Few have the platform.
+            Few can see them.
           </span>
         </motion.h2>
 
@@ -400,8 +397,9 @@ export function TheShift() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          AgentLand connects discovery, generation, deployment, and monitoring
-          into one continuous loop &mdash; so nothing falls through the cracks.
+          AgentLand gives you one control plane for every AI agent &mdash;
+          cost tracking, PII detection, compliance, and real-time monitoring
+          in one dashboard.
         </motion.p>
 
         {/* 2x2 Card Grid */}

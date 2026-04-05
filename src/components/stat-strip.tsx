@@ -43,7 +43,7 @@ export function StatStrip() {
               </span>
             </div>
             <p className="mt-4 text-base sm:text-lg text-[var(--text-secondary)] max-w-[280px] mx-auto md:mx-0 leading-relaxed">
-              of companies are adopting AI agents right now
+              of companies are running AI agents in production
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export function StatStrip() {
               </span>
             </div>
             <p className="mt-4 text-base sm:text-lg text-[var(--text-secondary)] max-w-[280px] mx-auto md:mx-0 md:ml-auto leading-relaxed">
-              have reached full production deployment
+              can see what those agents are actually doing
             </p>
           </div>
         </motion.div>
@@ -108,10 +108,10 @@ export function StatStrip() {
             className="text-[22px] sm:text-[26px] lg:text-[28px] leading-snug italic text-[var(--navy)]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            That gap is where companies lose.
+            That blind spot is where companies break.
             <br />
             <span className="gradient-heading">
-              It&apos;s where AgentLand lives.
+              It&apos;s where AgentLand comes in.
             </span>
           </p>
         </motion.div>

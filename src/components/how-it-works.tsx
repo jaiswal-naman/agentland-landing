@@ -13,42 +13,42 @@ const phases = [
     label: "Connect",
     color: "#0EA5E9",
     bgGradient: "linear-gradient(135deg, #F0F9FF, #E0F2FE)",
-    title: "Link your tools in minutes",
+    title: "Route through one proxy",
     description:
-      "CRMs, databases, communication platforms — via OAuth or API key.",
+      "Point your agents at AgentLand. Works with OpenAI, Anthropic, Bedrock, Azure, and any compatible endpoint.",
     Visual: PhaseConnect,
   },
   {
     key: "discover",
     number: "02",
-    label: "Discover",
+    label: "Detect",
     color: "#7C3AED",
     bgGradient: "linear-gradient(135deg, #F5F3FF, #EDE9FE)",
-    title: "AI finds what to automate",
+    title: "Agents appear instantly",
     description:
-      "AI scans your workflows, communication patterns, and data — surfaces every opportunity, ranked by ROI.",
+      "Every agent shows up in your dashboard the moment it routes through the proxy. Zero configuration.",
     Visual: PhaseDiscover,
   },
   {
     key: "deploy",
     number: "03",
-    label: "Build & Deploy",
+    label: "Monitor",
     color: "#059669",
     bgGradient: "linear-gradient(135deg, #ECFDF5, #D1FAE5)",
-    title: "Review, approve, it's live",
+    title: "Track cost, PII, and failures",
     description:
-      "Review the plan. Approve it. It's live. No code, no infrastructure, no guesswork.",
+      "Per-agent, per-model, per-day cost breakdown. PII detection with 25+ patterns. Catch runaway loops before they burn budget.",
     Visual: PhaseAutomate,
   },
   {
     key: "monitor",
     number: "04",
-    label: "Monitor",
+    label: "Govern",
     color: "#D97706",
     bgGradient: "linear-gradient(135deg, #FFFBEB, #FEF3C7)",
-    title: "Full visibility, always",
+    title: "Control and comply",
     description:
-      "Every agent, every execution. Success rates, time saved, costs tracked. Alerts on drift.",
+      "Kill switch per agent. Role-based access. Compliance reporting — EU AI Act, SOC 2 evidence packages. Full audit trail.",
     Visual: PhaseMonitor,
   },
 ];
@@ -77,8 +77,8 @@ export function HowItWorks() {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Four phases.{" "}
-            <span className="gradient-heading">One platform.</span>
+            Four steps.{" "}
+            <span className="gradient-heading">Full visibility.</span>
           </motion.h2>
 
           <motion.p
@@ -88,8 +88,8 @@ export function HowItWorks() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-5 text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed"
           >
-            From your first connected system to a running fleet of agents. End
-            to end.
+            From first proxy connection to full observability. Under five
+            minutes.
           </motion.p>
         </div>
 

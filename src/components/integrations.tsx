@@ -47,7 +47,7 @@ export function Integrations() {
         viewport={{ once: true }}
         className="text-center text-[var(--text-secondary)] mb-8 text-sm"
       >
-        Connects to the tools you already run
+        Works with your existing stack
       </motion.p>
 
       <div className="relative">
